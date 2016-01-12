@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Button ID="btn_showWeather" runat="server" Text="Predict weather condition" />
+        <asp:Button ID="btn_showWeather" runat="server" Text="Predict weather condition" OnClick="btn_showWeather_Click" />
         <asp:Label ID="labelResult" runat="server" Text="Result"></asp:Label>
     </div>
     </form>

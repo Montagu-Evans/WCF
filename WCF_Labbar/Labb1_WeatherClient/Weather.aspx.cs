@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Labb1_WeatherClient.ServiceForCheckingWeather;
 
 namespace Labb1_WeatherClient
 {
@@ -12,6 +13,12 @@ namespace Labb1_WeatherClient
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btn_showWeather_Click(object sender, EventArgs e)
+        {
+            ServiceForCheckingWeather.WeatherServiceSoapClient client = new WeatherServiceSoapClient();
+            labelResult.Text = client.WeatherServices();
         }
     }
 }
