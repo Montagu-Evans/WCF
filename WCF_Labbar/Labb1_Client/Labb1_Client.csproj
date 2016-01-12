@@ -214,6 +214,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="WeatherService.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -384,6 +385,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherService.aspx.cs">
+      <DependentUpon>WeatherService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeatherService.aspx.designer.cs">
+      <DependentUpon>WeatherService.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
