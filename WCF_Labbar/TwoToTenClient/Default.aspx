@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TwoToTen_Client.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TwoToTenClient.Default" %>
 
 <!DOCTYPE html>
 
@@ -8,14 +8,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+       <div>
             <asp:Label ID="lbl" runat="server" Text="List contains following names so far: Giorgio, Gunnel, David, Bård, Ove, Maria, Angus, Red, André, Kitty, Richard, Mohammed"></asp:Label>
         </div>
         <div>
             <asp:TextBox ID="txtBox" runat="server"></asp:TextBox>
             <asp:Button ID="btn_search" runat="server" Text="Search" OnClick="btn_search_Click" />
             <asp:Label ID="lbl_result" runat="server" Text=""></asp:Label>
-
         </div>
     </form>
 </body>

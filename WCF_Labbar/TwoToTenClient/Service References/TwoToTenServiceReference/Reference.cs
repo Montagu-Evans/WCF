@@ -8,26 +8,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Death_Client.DeathServiceReference {
+namespace TwoToTenClient.TwoToTenServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DeathServiceReference.DeathServicesSoap")]
-    public interface DeathServicesSoap {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TwoToTenServiceReference.TwoToTenServicesSoap")]
+    public interface TwoToTenServicesSoap {
         
         // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        Death_Client.DeathServiceReference.HelloWorldResponse HelloWorld(Death_Client.DeathServiceReference.HelloWorldRequest request);
+        TwoToTenClient.TwoToTenServiceReference.HelloWorldResponse HelloWorld(TwoToTenClient.TwoToTenServiceReference.HelloWorldRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        System.Threading.Tasks.Task<Death_Client.DeathServiceReference.HelloWorldResponse> HelloWorldAsync(Death_Client.DeathServiceReference.HelloWorldRequest request);
+        System.Threading.Tasks.Task<TwoToTenClient.TwoToTenServiceReference.HelloWorldResponse> HelloWorldAsync(TwoToTenClient.TwoToTenServiceReference.HelloWorldRequest request);
         
         // CODEGEN: Generating message contract since element name inputVal from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeathCasesJanuary", ReplyAction="*")]
-        Death_Client.DeathServiceReference.DeathCasesJanuaryResponse DeathCasesJanuary(Death_Client.DeathServiceReference.DeathCasesJanuaryRequest request);
+        TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryResponse DeathCasesJanuary(TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeathCasesJanuary", ReplyAction="*")]
-        System.Threading.Tasks.Task<Death_Client.DeathServiceReference.DeathCasesJanuaryResponse> DeathCasesJanuaryAsync(Death_Client.DeathServiceReference.DeathCasesJanuaryRequest request);
+        System.Threading.Tasks.Task<TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryResponse> DeathCasesJanuaryAsync(TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -37,12 +37,12 @@ namespace Death_Client.DeathServiceReference {
     public partial class HelloWorldRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://tempuri.org/", Order=0)]
-        public Death_Client.DeathServiceReference.HelloWorldRequestBody Body;
+        public TwoToTenClient.TwoToTenServiceReference.HelloWorldRequestBody Body;
         
         public HelloWorldRequest() {
         }
         
-        public HelloWorldRequest(Death_Client.DeathServiceReference.HelloWorldRequestBody Body) {
+        public HelloWorldRequest(TwoToTenClient.TwoToTenServiceReference.HelloWorldRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -64,12 +64,12 @@ namespace Death_Client.DeathServiceReference {
     public partial class HelloWorldResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Death_Client.DeathServiceReference.HelloWorldResponseBody Body;
+        public TwoToTenClient.TwoToTenServiceReference.HelloWorldResponseBody Body;
         
         public HelloWorldResponse() {
         }
         
-        public HelloWorldResponse(Death_Client.DeathServiceReference.HelloWorldResponseBody Body) {
+        public HelloWorldResponse(TwoToTenClient.TwoToTenServiceReference.HelloWorldResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -98,12 +98,12 @@ namespace Death_Client.DeathServiceReference {
     public partial class DeathCasesJanuaryRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeathCasesJanuary", Namespace="http://tempuri.org/", Order=0)]
-        public Death_Client.DeathServiceReference.DeathCasesJanuaryRequestBody Body;
+        public TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequestBody Body;
         
         public DeathCasesJanuaryRequest() {
         }
         
-        public DeathCasesJanuaryRequest(Death_Client.DeathServiceReference.DeathCasesJanuaryRequestBody Body) {
+        public DeathCasesJanuaryRequest(TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -132,12 +132,12 @@ namespace Death_Client.DeathServiceReference {
     public partial class DeathCasesJanuaryResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeathCasesJanuaryResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Death_Client.DeathServiceReference.DeathCasesJanuaryResponseBody Body;
+        public TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryResponseBody Body;
         
         public DeathCasesJanuaryResponse() {
         }
         
-        public DeathCasesJanuaryResponse(Death_Client.DeathServiceReference.DeathCasesJanuaryResponseBody Body) {
+        public DeathCasesJanuaryResponse(TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -160,78 +160,78 @@ namespace Death_Client.DeathServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface DeathServicesSoapChannel : Death_Client.DeathServiceReference.DeathServicesSoap, System.ServiceModel.IClientChannel {
+    public interface TwoToTenServicesSoapChannel : TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class DeathServicesSoapClient : System.ServiceModel.ClientBase<Death_Client.DeathServiceReference.DeathServicesSoap>, Death_Client.DeathServiceReference.DeathServicesSoap {
+    public partial class TwoToTenServicesSoapClient : System.ServiceModel.ClientBase<TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap>, TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap {
         
-        public DeathServicesSoapClient() {
+        public TwoToTenServicesSoapClient() {
         }
         
-        public DeathServicesSoapClient(string endpointConfigurationName) : 
+        public TwoToTenServicesSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public DeathServicesSoapClient(string endpointConfigurationName, string remoteAddress) : 
+        public TwoToTenServicesSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public DeathServicesSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public TwoToTenServicesSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public DeathServicesSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public TwoToTenServicesSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Death_Client.DeathServiceReference.HelloWorldResponse Death_Client.DeathServiceReference.DeathServicesSoap.HelloWorld(Death_Client.DeathServiceReference.HelloWorldRequest request) {
+        TwoToTenClient.TwoToTenServiceReference.HelloWorldResponse TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap.HelloWorld(TwoToTenClient.TwoToTenServiceReference.HelloWorldRequest request) {
             return base.Channel.HelloWorld(request);
         }
         
         public string HelloWorld() {
-            Death_Client.DeathServiceReference.HelloWorldRequest inValue = new Death_Client.DeathServiceReference.HelloWorldRequest();
-            inValue.Body = new Death_Client.DeathServiceReference.HelloWorldRequestBody();
-            Death_Client.DeathServiceReference.HelloWorldResponse retVal = ((Death_Client.DeathServiceReference.DeathServicesSoap)(this)).HelloWorld(inValue);
+            TwoToTenClient.TwoToTenServiceReference.HelloWorldRequest inValue = new TwoToTenClient.TwoToTenServiceReference.HelloWorldRequest();
+            inValue.Body = new TwoToTenClient.TwoToTenServiceReference.HelloWorldRequestBody();
+            TwoToTenClient.TwoToTenServiceReference.HelloWorldResponse retVal = ((TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap)(this)).HelloWorld(inValue);
             return retVal.Body.HelloWorldResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Death_Client.DeathServiceReference.HelloWorldResponse> Death_Client.DeathServiceReference.DeathServicesSoap.HelloWorldAsync(Death_Client.DeathServiceReference.HelloWorldRequest request) {
+        System.Threading.Tasks.Task<TwoToTenClient.TwoToTenServiceReference.HelloWorldResponse> TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap.HelloWorldAsync(TwoToTenClient.TwoToTenServiceReference.HelloWorldRequest request) {
             return base.Channel.HelloWorldAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Death_Client.DeathServiceReference.HelloWorldResponse> HelloWorldAsync() {
-            Death_Client.DeathServiceReference.HelloWorldRequest inValue = new Death_Client.DeathServiceReference.HelloWorldRequest();
-            inValue.Body = new Death_Client.DeathServiceReference.HelloWorldRequestBody();
-            return ((Death_Client.DeathServiceReference.DeathServicesSoap)(this)).HelloWorldAsync(inValue);
+        public System.Threading.Tasks.Task<TwoToTenClient.TwoToTenServiceReference.HelloWorldResponse> HelloWorldAsync() {
+            TwoToTenClient.TwoToTenServiceReference.HelloWorldRequest inValue = new TwoToTenClient.TwoToTenServiceReference.HelloWorldRequest();
+            inValue.Body = new TwoToTenClient.TwoToTenServiceReference.HelloWorldRequestBody();
+            return ((TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap)(this)).HelloWorldAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Death_Client.DeathServiceReference.DeathCasesJanuaryResponse Death_Client.DeathServiceReference.DeathServicesSoap.DeathCasesJanuary(Death_Client.DeathServiceReference.DeathCasesJanuaryRequest request) {
+        TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryResponse TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap.DeathCasesJanuary(TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequest request) {
             return base.Channel.DeathCasesJanuary(request);
         }
         
         public string DeathCasesJanuary(string inputVal) {
-            Death_Client.DeathServiceReference.DeathCasesJanuaryRequest inValue = new Death_Client.DeathServiceReference.DeathCasesJanuaryRequest();
-            inValue.Body = new Death_Client.DeathServiceReference.DeathCasesJanuaryRequestBody();
+            TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequest inValue = new TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequest();
+            inValue.Body = new TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequestBody();
             inValue.Body.inputVal = inputVal;
-            Death_Client.DeathServiceReference.DeathCasesJanuaryResponse retVal = ((Death_Client.DeathServiceReference.DeathServicesSoap)(this)).DeathCasesJanuary(inValue);
+            TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryResponse retVal = ((TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap)(this)).DeathCasesJanuary(inValue);
             return retVal.Body.DeathCasesJanuaryResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Death_Client.DeathServiceReference.DeathCasesJanuaryResponse> Death_Client.DeathServiceReference.DeathServicesSoap.DeathCasesJanuaryAsync(Death_Client.DeathServiceReference.DeathCasesJanuaryRequest request) {
+        System.Threading.Tasks.Task<TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryResponse> TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap.DeathCasesJanuaryAsync(TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequest request) {
             return base.Channel.DeathCasesJanuaryAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Death_Client.DeathServiceReference.DeathCasesJanuaryResponse> DeathCasesJanuaryAsync(string inputVal) {
-            Death_Client.DeathServiceReference.DeathCasesJanuaryRequest inValue = new Death_Client.DeathServiceReference.DeathCasesJanuaryRequest();
-            inValue.Body = new Death_Client.DeathServiceReference.DeathCasesJanuaryRequestBody();
+        public System.Threading.Tasks.Task<TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryResponse> DeathCasesJanuaryAsync(string inputVal) {
+            TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequest inValue = new TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequest();
+            inValue.Body = new TwoToTenClient.TwoToTenServiceReference.DeathCasesJanuaryRequestBody();
             inValue.Body.inputVal = inputVal;
-            return ((Death_Client.DeathServiceReference.DeathServicesSoap)(this)).DeathCasesJanuaryAsync(inValue);
+            return ((TwoToTenClient.TwoToTenServiceReference.TwoToTenServicesSoap)(this)).DeathCasesJanuaryAsync(inValue);
         }
     }
 }

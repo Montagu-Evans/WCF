@@ -9,14 +9,14 @@ using System.Web.Services;
 namespace Death_Service
 {
     /// <summary>
-    /// Summary description for DeathServices
+    /// Summary description for TwoToTenServices
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
-    public class DeathServices : System.Web.Services.WebService
+    public class TwoToTenServices : System.Web.Services.WebService
     {
 
         [WebMethod]
@@ -55,5 +55,8 @@ namespace Death_Service
             //}
             //return string.Empty;
         }
+
+        //[WebMethod]
+        //public string 
     }
 }

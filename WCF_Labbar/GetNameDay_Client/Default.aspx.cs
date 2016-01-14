@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
-using GetNameDay_Client.GetNameDayServiceReference;
+using GetNameDay_Client.Service_References.GetNameDayServiceReference;
 
 namespace GetNameDay_Client
 {
@@ -22,7 +22,7 @@ namespace GetNameDay_Client
         protected void btn_result_Click(object sender, EventArgs e)
         {
 
-            GetNameDayServiceReference.GetNameDaySoapClient client = new GetNameDaySoapClient();
+            GetNameDaySoapClient client = new GetNameDaySoapClient();
             var birthday = client.GetNameAndGetTheDate(txtBox.Text);
             lbl_result.Text = birthday != string.Empty ? birthday : "skriv in ett namn!";
             

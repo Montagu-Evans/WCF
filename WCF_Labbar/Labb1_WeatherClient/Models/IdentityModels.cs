@@ -6,11 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Labb1_WeatherClient.Models;
 
 namespace Labb1_WeatherClient.Models
-{
-    // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
+{ // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
@@ -39,11 +37,9 @@ namespace Labb1_WeatherClient.Models
             return new ApplicationDbContext();
         }
     }
-}
 
-#region Helpers
-namespace Labb1_WeatherClient
-{
+    #region Helpers
+
     public static class IdentityHelper
     {
         // Used for XSRF when linking external logins
@@ -96,5 +92,6 @@ namespace Labb1_WeatherClient
             }
         }
     }
+
+    #endregion
 }
-#endregion

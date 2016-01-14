@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using AddTwoNumbers_Client.AddTwoNumbers_ServiceReference;
+using AddTwoNumbers_Client.Service_References.AddTwoNumbers_ServiceReference;
 
 namespace AddTwoNumbers_Client
 {
@@ -17,7 +17,7 @@ namespace AddTwoNumbers_Client
 
         protected void btn_result_Click(object sender, EventArgs e)
         {
-            AddTwoNumbers_ServiceReference.AddNumbersSoapClient client = new AddNumbersSoapClient();
+            AddNumbersSoapClient client = new AddNumbersSoapClient();
             var tal1 = int.Parse(txtBoxOne.Text);
             var tal2 = int.Parse(txtBoxTwo.Text);
             lbl_result.Text = client.AddTwoNumbers(tal1, tal2).ToString();

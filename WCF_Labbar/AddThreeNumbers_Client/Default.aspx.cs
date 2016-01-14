@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using AddThreeNumbers_Client.AddThreeNumbers_ServiceReference;
+using AddThreeNumbers_Client.Service_References.AddThreeNumbers_ServiceReference;
 
 namespace AddThreeNumbers_Client
 {
@@ -17,7 +17,7 @@ namespace AddThreeNumbers_Client
 
         protected void btn_result_Click(object sender, EventArgs e)
         {
-            AddThreeNumbers_ServiceReference.AddThreeNumbersSoapClient client = new AddThreeNumbersSoapClient();
+            AddThreeNumbersSoapClient client = new AddThreeNumbersSoapClient();
             lbl_result.Text = client.AddTotalThreeNumbers(int.Parse(txtBoxOne.Text), int.Parse(txtBoxTwo.Text), int.Parse(txtBoxThree.Text)).ToString();
         }
     }

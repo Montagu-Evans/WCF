@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="73384c48-eeb0-45db-9480-f03908fbc462" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="40fd81df-91c0-4f91-8d98-14c663555cff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:41548/DeathServices.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:55638/TwoToTenServices.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DeathServices.disco" MetadataType="Disco" ID="a1a31f3a-d326-42a1-ac44-2c5c468e4596" SourceId="1" SourceUrl="http://localhost:41548/DeathServices.asmx?disco" />
-    <MetadataFile FileName="DeathServices.wsdl" MetadataType="Wsdl" ID="11ee1e5d-6734-4351-8a07-7fa5ce733f6d" SourceId="1" SourceUrl="http://localhost:41548/DeathServices.asmx?wsdl" />
+    <MetadataFile FileName="TwoToTenServices.wsdl" MetadataType="Wsdl" ID="6d9f3a80-51be-40c2-ba69-c8fe61a584e7" SourceId="1" SourceUrl="http://localhost:55638/TwoToTenServices.asmx?wsdl" />
+    <MetadataFile FileName="TwoToTenServices.disco" MetadataType="Disco" ID="81bf7bbd-7145-4fd2-a6f7-04cb3800c81f" SourceId="1" SourceUrl="http://localhost:55638/TwoToTenServices.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

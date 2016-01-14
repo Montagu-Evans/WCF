@@ -40,7 +40,7 @@
   <wsdl:message name="DeathCasesJanuarySoapOut">
     <wsdl:part name="parameters" element="tns:DeathCasesJanuaryResponse" />
   </wsdl:message>
-  <wsdl:portType name="DeathServicesSoap">
+  <wsdl:portType name="TwoToTenServicesSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
       <wsdl:output message="tns:HelloWorldSoapOut" />
@@ -50,7 +50,7 @@
       <wsdl:output message="tns:DeathCasesJanuarySoapOut" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="DeathServicesSoap" type="tns:DeathServicesSoap">
+  <wsdl:binding name="TwoToTenServicesSoap" type="tns:TwoToTenServicesSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="HelloWorld">
       <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
@@ -71,7 +71,7 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:binding name="DeathServicesSoap12" type="tns:DeathServicesSoap">
+  <wsdl:binding name="TwoToTenServicesSoap12" type="tns:TwoToTenServicesSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="HelloWorld">
       <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
@@ -92,12 +92,12 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="DeathServices">
-    <wsdl:port name="DeathServicesSoap" binding="tns:DeathServicesSoap">
-      <soap:address location="http://localhost:41548/DeathServices.asmx" />
+  <wsdl:service name="TwoToTenServices">
+    <wsdl:port name="TwoToTenServicesSoap" binding="tns:TwoToTenServicesSoap">
+      <soap:address location="http://localhost:55638/TwoToTenServices.asmx" />
     </wsdl:port>
-    <wsdl:port name="DeathServicesSoap12" binding="tns:DeathServicesSoap12">
-      <soap12:address location="http://localhost:41548/DeathServices.asmx" />
+    <wsdl:port name="TwoToTenServicesSoap12" binding="tns:TwoToTenServicesSoap12">
+      <soap12:address location="http://localhost:55638/TwoToTenServices.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

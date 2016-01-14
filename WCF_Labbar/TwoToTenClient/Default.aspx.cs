@@ -1,7 +1,12 @@
 ﻿using System;
-using TwoToTen_Client.Service_References.TwoToTenServiceReferences;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TwoToTenClient.TwoToTenServiceReference;
 
-namespace TwoToTen_Client
+namespace TwoToTenClient
 {
     public partial class Default : System.Web.UI.Page
     {
@@ -12,17 +17,17 @@ namespace TwoToTen_Client
 
         protected void btn_search_Click(object sender, EventArgs e)
         {
-            TwoToTenServiceReferences.client = new DeathServicesSoapClient();
+            TwoToTenServiceReference.TwoToTenServicesSoapClient client = new TwoToTenServicesSoapClient();
             var death = client.DeathCasesJanuary(txtBox.Text);
+
             if (death != string.Empty)
             {
-                lbl_result.Text = death; 
+                lbl_result.Text = death;
             }
             else
             {
-                lbl_result.Text = "test";
+                lbl_result.Text = "No no no";
             }
-            
         }
     }
 }

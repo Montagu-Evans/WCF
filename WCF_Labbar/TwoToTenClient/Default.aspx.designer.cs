@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TwoToTen_Client {
+namespace TwoToTenClient {
     
     
     public partial class Default {
