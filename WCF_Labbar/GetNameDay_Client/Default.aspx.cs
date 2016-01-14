@@ -21,11 +21,11 @@ namespace GetNameDay_Client
 
         protected void btn_result_Click(object sender, EventArgs e)
         {
-           
 
             GetNameDayServiceReference.GetNameDaySoapClient client = new GetNameDaySoapClient();
-            var input = txtBox.Text;
-            lbl_result.Text = client.GetNameAndGetTheDate(input);
+            var birthday = client.GetNameAndGetTheDate(txtBox.Text);
+            lbl_result.Text = birthday != string.Empty ? birthday : "skriv in ett namn!";
+            
         }
     }
 }
