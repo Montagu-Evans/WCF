@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4d09bc71-efb8-4ae1-970b-df29112a9be2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2aa5d463-262d-4dc2-b04c-99ba7cc4e75c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:55638/TwoToTenServices.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:42477/DeathOfJanuaryService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TwoToTenServices.wsdl" MetadataType="Wsdl" ID="c98a2850-b834-4766-8bc5-b0387886d34e" SourceId="1" SourceUrl="http://localhost:55638/TwoToTenServices.asmx?wsdl" />
-    <MetadataFile FileName="TwoToTenServices.disco" MetadataType="Disco" ID="c258f7ac-11a8-48d8-81e1-c38c8628cb89" SourceId="1" SourceUrl="http://localhost:55638/TwoToTenServices.asmx?disco" />
+    <MetadataFile FileName="DeathOfJanuaryService.disco" MetadataType="Disco" ID="3c2330d8-54f6-4033-8be0-2fa368af0aa2" SourceId="1" SourceUrl="http://localhost:42477/DeathOfJanuaryService.asmx?disco" />
+    <MetadataFile FileName="DeathOfJanuaryService.wsdl" MetadataType="Wsdl" ID="730da62b-8f15-4ef7-9540-eefb1ea2298a" SourceId="1" SourceUrl="http://localhost:42477/DeathOfJanuaryService.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

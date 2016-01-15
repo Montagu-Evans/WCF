@@ -24,18 +24,36 @@ namespace TwoToTenServices
             return "Hello World";
         }
 
+        //[WebMethod]
+        //public string FastestRecord(string inputVal)
+        //{
+        //    var file = File.ReadAllLines(Server.MapPath("Hastighetsrekord.txt"));
+
+        //    for (int i = 0; i < file.Length; i++)
+        //    {
+        //        var array = file[i].Split('-');
+
+        //        for (int j = 0; j < array.Length; j++)
+        //        {
+        //            if(array.Any(x=>x.Replace("-", "") == inputVal))
+        //            return array[0] + " " + array[1] + " " + array[2];
+        //        }
+        //    }
+        //    return string.Empty;
+        //}
+
         [WebMethod]
         public string DeathCasesJanuary(string inputVal)
         {
-            var deathOfJanuary = File.ReadAllLines(Server.MapPath("Dödsfall.txt"));
+            var file = File.ReadAllLines(Server.MapPath("Dödsfall.txt"));
 
-            foreach (var item in deathOfJanuary)
+            foreach (var item in file)
             {
                 var array = item.Split(' ');
 
                 if (array.Any(x => x.Replace(",", "") == inputVal))
                 {
-                    return "<strong>" + "Day of death: " + "</strong>" + array[0] + " " + array[1];
+                    return array[2] + " " + array[3] + " " + array[4];
                 }
             }
             return string.Empty;
