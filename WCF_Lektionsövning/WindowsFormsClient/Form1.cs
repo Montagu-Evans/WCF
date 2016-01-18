@@ -21,7 +21,19 @@ namespace WindowsFormsClient
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lbl_message.Text = host.GetSocialSecurityNumber(txtBox.Text);
+            try
+            {
+                if (host.State == System.ServiceModel.CommunicationState.Faulted)
+                {
+                    host = new GetSocialSecurityNumberClient();
+                }
+
+                lbl_message.Text = host.GetSocialSecurityNumber(txtBox.Text);
+            }
+            catch (Exception ex)
+            {
+                lbl_message.Text = ex.Message;
+            }
         }
     }
 }

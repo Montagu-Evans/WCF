@@ -13,13 +13,12 @@ namespace EcUtbildning.Client
             while (true)
             {
                 DateAsStringClient host = new DateAsStringClient();
-            
+
                 Console.WriteLine("Skriv datumet 2016");
                 var date = Console.ReadLine();
                 Console.WriteLine(host.ReturnDateAsString(date));
                 Console.ReadLine();
             }
-            
         }
     }
 }
