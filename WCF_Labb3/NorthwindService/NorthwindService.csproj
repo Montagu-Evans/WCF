@@ -125,6 +125,7 @@
     </Compile>
     <Compile Include="IShipperService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shipper.cs" />
     <Compile Include="ShipperService.svc.cs">
       <DependentUpon>ShipperService.svc</DependentUpon>
     </Compile>
