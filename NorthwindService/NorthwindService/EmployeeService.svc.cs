@@ -42,9 +42,23 @@ namespace NorthwindService
             return employee;
         }
 
-    public void SaveEmployee(Employee employee)
+        public void SaveEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                using (var cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Employees SET FirstName = @firstName, LastName = @lastName, Country = @country, Title = @title where EmployeeID = @employeeId ";
+                    cmd.Parameters.AddWithValue("@employeeId", employee.EmployeeId);
+                    cmd.Parameters.AddWithValue("@firstName", employee.FirstName);
+                    cmd.Parameters.AddWithValue("@lastName", employee.LastName);
+                    cmd.Parameters.AddWithValue("@country", employee.Country);
+                    cmd.Parameters.AddWithValue("@title", employee.Title);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
