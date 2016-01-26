@@ -21,7 +21,7 @@ namespace NorthwindService
             var shipper = new Shipper();
 
             string queryString =
-                "SELECT * FROM dbo.Shippers WHERE ShipperID =" + shipperId;
+                "SELECT * FROM [dbo].[Shippers] WHERE [ShipperID] =" + shipperId;
 
             using (SqlConnection connection = new SqlConnection(_settings))
             {
@@ -43,16 +43,14 @@ namespace NorthwindService
         public void SaveShipper(Shipper shipper)
         {
             using (SqlConnection connection = new SqlConnection(_settings))
+            using (SqlCommand cmd = connection.CreateCommand())
             {
-                SqlCommand cmd =
-                    new SqlCommand("UPDATE dbo.Shippers SET CompanyName = @companyName, Phone = @phone WHERE ShipperID = @shipperId")
-                    {
-                        CommandType = CommandType.Text,
-                        Connection = connection
-                    };
                 cmd.Parameters.AddWithValue("@companyName", shipper.CompanyName);
                 cmd.Parameters.AddWithValue("@phone", shipper.Phone);
-                cmd.Parameters.AddWithValue("@shipperId", shipper.ShipperId);
+                cmd.Parameters.AddWithValue("@shipperID", shipper.ShipperId);
+
+                cmd.CommandText =
+                        "UPDATE Shippers SET CompanyName = @companyName, Phone = @phone WHERE ShipperID = @shipperID";
                 connection.Open();
                 cmd.ExecuteNonQuery();
             }
