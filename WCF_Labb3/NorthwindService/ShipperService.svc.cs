@@ -40,15 +40,22 @@ namespace NorthwindService
             return shipper;
         }
 
-        public Shipper SaveShipper(int id, string companyName, string phone)
+        public void SaveShipper(Shipper shipper)
         {
-            var shipper = new Shipper()
+            using (SqlConnection connection = new SqlConnection(_settings))
             {
-                ShipperId = id,
-                CompanyName = companyName,
-                Phone = phone
-            };
-            return shipper;
+                SqlCommand cmd =
+                    new SqlCommand("UPDATE dbo.Shippers SET CompanyName = @companyName, Phone = @phone WHERE ShipperID = @shipperId")
+                    {
+                        CommandType = CommandType.Text,
+                        Connection = connection
+                    };
+                cmd.Parameters.AddWithValue("@companyName", shipper.CompanyName);
+                cmd.Parameters.AddWithValue("@phone", shipper.Phone);
+                cmd.Parameters.AddWithValue("@shipperId", shipper.ShipperId);
+                connection.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }
