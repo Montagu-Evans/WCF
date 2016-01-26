@@ -14,13 +14,35 @@ namespace NorthwindService
     // NOTE: In order to launch WCF Test Client for testing this service, please select EmployeeService.svc or EmployeeService.svc.cs at the Solution Explorer and start debugging.
     public class EmployeeService : IEmployeeService
     {
-        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["NORTHWND"].ConnectionString;
-        public int GetEmployees(int id)
+        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["MyDb"].ConnectionString;
+        public Employee GetEmployees(int id)
         {
-            throw new NotImplementedException();
+            var queryString = "SELECT * FROM Employees WHERE EmployeeID =" + id;
+            var employee = new Employee();
+
+            using (SqlConnection connection =
+            new SqlConnection(_connectionString))
+            {
+                // Create the Command and Parameter objects.
+                SqlCommand command = new SqlCommand(queryString, connection);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    employee.EmployeeId = int.Parse(reader["EmployeeID"].ToString());
+                    employee.FirstName = reader["FirstName"].ToString();
+                    employee.LastName = reader["LastName"].ToString();
+                    employee.Country = reader["Country"].ToString();
+                    employee.Title = reader["Title"].ToString();
+                }
+            }
+
+            return employee;
         }
 
-        public void Employee(Employee employee)
+    public void SaveEmployee(Employee employee)
         {
             throw new NotImplementedException();
         }

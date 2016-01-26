@@ -12,9 +12,9 @@ namespace NorthwindService
     public interface IEmployeeService
     {
         [OperationContract]
-        int GetEmployees(int id);
+        Employee GetEmployees(int id);
 
         [OperationContract]
-        void Employee(Employee employee);
+        void SaveEmployee(Employee employee);
     }
 }
