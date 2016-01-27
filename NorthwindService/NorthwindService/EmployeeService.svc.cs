@@ -12,7 +12,7 @@ namespace NorthwindService
         {
             try
             {
-                var queryString = "ELECT * FROM Employees WHERE EmployeeID =" + id;
+                var queryString = "SELECT * FROM Employees WHERE EmployeeID =" + id;
                 var employee = new Employee();
 
                 using (SqlConnection connection =
