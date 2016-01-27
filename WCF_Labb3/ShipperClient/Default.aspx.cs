@@ -27,11 +27,12 @@ namespace ShipperClient
         protected void btnSave_Click(object sender, EventArgs e)
         {
             var client = new ShipperServiceClient();
-            var shipper = new Shipper();
-
-            shipper.ShipperId = int.Parse(TxtBoxTwo.Text);
-            shipper.CompanyName = txtBoxThree.Text;
-            shipper.Phone = txtBoxFour.Text;
+            var shipper = new Shipper
+            {
+                ShipperId = int.Parse(TxtBoxTwo.Text),
+                CompanyName = txtBoxThree.Text,
+                Phone = txtBoxFour.Text
+            };
 
             client.SaveShipper(shipper);
         }

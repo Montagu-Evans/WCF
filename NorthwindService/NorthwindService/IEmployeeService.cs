@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+using System.Data.SqlClient;
 using System.ServiceModel;
-using System.Text;
 
 namespace NorthwindService
 {
@@ -12,9 +9,13 @@ namespace NorthwindService
     public interface IEmployeeService
     {
         [OperationContract]
+        [FaultContract(typeof(ApplicationException))]
+        [FaultContract(typeof(SqlException))]
         Employee GetEmployees(int id);
 
         [OperationContract]
+        [FaultContract(typeof(ApplicationException))]
+        [FaultContract(typeof(SqlException))]
         void SaveEmployee(Employee employee);
     }
 }
